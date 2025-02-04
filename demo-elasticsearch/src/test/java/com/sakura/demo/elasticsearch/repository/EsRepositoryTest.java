@@ -93,6 +93,12 @@ public class EsRepositoryTest {
     }
 
 
+    /**
+     * <a  href="https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.17/java-rest-high-search.html">RestClient 文档</a>
+     * <br/>
+     * <a  href="https://docs.spring.io/spring-data/elasticsearch/reference/elasticsearch/template.html#elasticsearch.operations.queries">SpringData 文档</a>
+     *
+     */
     @DisplayName("测试Bool")
     @Test
     void testBool() {

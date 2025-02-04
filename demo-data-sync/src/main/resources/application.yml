@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: data-sync
+  datasource:
+    url: jdbc:mysql://localhost:3306/my_db
+    username: root
+    password: 123abc
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  elasticsearch:
+    connection-timeout: 30s
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.sakura.demo.datasync.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

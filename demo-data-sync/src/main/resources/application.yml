@@ -15,3 +15,15 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# canal 配置
+canal:
+  port: 11111
+  batch-size: 1000
+  destination: example
+#  https://github.com/alibaba/canal/wiki/AdminGuide    canal.instance.filter.regex配置
+  filter: "my_db\\..*"
+  username:
+  password:
+  base-package: com.sakura.demo.datasync.modal.document
+  clazz-suffix: Document

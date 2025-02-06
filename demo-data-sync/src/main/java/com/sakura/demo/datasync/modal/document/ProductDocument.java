@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.*;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Document(indexName = "product", createIndex = true)
 @Data
@@ -43,4 +44,10 @@ public class ProductDocument {
 
     @Field(type = FieldType.Double)
     private BigDecimal price;
+
+    // 忽略映射
+    @Field(index = false, store = true, type = FieldType.Date, format = {}, pattern = DATE_TIME_PATTERN)
+    private Date updateTime;
+
+    private static final String DATE_TIME_PATTERN = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
 }

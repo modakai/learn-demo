@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" id="username" placeholder="用户名">
+<button onclick="login()">登录</button>
+<div id="chatBox" style="display:none">
+    <input type="text" id="message" placeholder="输入消息">
+    <button onclick="send()">发送</button>
+    <div id="messages"></div>
+</div>
+
+<script>
+    let ws;
+    function login() {
+        const username = document.getElementById('username').value;
+        ws = new WebSocket(`ws://localhost:8081/ws`);
+
+        ws.onopen = () => {
+            ws.send(JSON.stringify({
+                type: "LOGIN",
+                sender: username
+            }));
+            document.getElementById('chatBox').style.display = 'block';
+        };
+
+        ws.onmessage = (event) => {
+            const msg = JSON.parse(event.data);
+            document.getElementById('messages').innerHTML +=
+                `<p>${msg.sender}: ${msg.content}</p>`;
+        };
+    }
+
+    function send() {
+        const content = document.getElementById('message').value;
+        ws.send(JSON.stringify({
+            type: "CHAT",
+            sender: document.getElementById('username').value,
+            receiver: "ALL",
+            content: content
+        }));
+        document.getElementById('message').value = '';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: netty_websocket_application
+server:
+  port: 7777

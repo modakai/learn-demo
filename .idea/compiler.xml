@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo-netty-websocket" />
+        <module name="demo-data-sync" />
+        <module name="demo-elasticsearch" />
+        <module name="demo-rate-limit" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo-data-sync" options="-parameters" />
+      <module name="demo-elasticsearch" options="-parameters" />
+      <module name="demo-netty-websocket" options="-parameters" />
+      <module name="demo-rate-limit" options="-parameters" />
+    </option>
+  </component>
+</project>

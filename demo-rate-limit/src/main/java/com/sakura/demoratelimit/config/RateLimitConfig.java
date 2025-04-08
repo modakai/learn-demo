@@ -1,5 +1,6 @@
 package com.sakura.demoratelimit.config;
 
+import com.sakura.demoratelimit.leakybucket.LeakyBucketRateLimiter;
 import com.sakura.demoratelimit.simple.SlidingWindowRateLimiter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -10,6 +11,7 @@ public class RateLimitConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new SlidingWindowRateLimiter()).addPathPatterns("/api/index");
+//        registry.addInterceptor(new SlidingWindowRateLimiter()).addPathPatterns("/api/index");
+        registry.addInterceptor(new LeakyBucketRateLimiter()).addPathPatterns("/api/index");
     }
 }

@@ -37,14 +37,7 @@ public class SlidingWindowRateLimiter implements HandlerInterceptor {
         log.info("当前请求数：{}", logs.size());
         if (logs.size() >= maxRequests) {
             // 拒绝请求
-            ResponseVo responseVo = new ResponseVo();
-            responseVo.setCode(400);
-            responseVo.setMsg("请求过于频繁，请稍后再试");
-            ObjectMapper objectMapper = new ObjectMapper();
-            response.setContentType("application/json");
-            response.setCharacterEncoding("UTF-8");
-            String json = objectMapper.writeValueAsString(responseVo);
-            response.getWriter().write(json);
+//            ResponseVo.responseJson(response);
             log.warn("当前请求URI：{} 被拒绝", key);
             return false;
         } else {

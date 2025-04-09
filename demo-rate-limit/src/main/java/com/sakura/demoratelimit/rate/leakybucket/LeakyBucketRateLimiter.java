@@ -1,4 +1,4 @@
-package com.sakura.demoratelimit.leakybucket;
+package com.sakura.demoratelimit.rate.leakybucket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sakura.demoratelimit.modal.ResponseVo;
@@ -51,7 +51,6 @@ public class LeakyBucketRateLimiter implements HandlerInterceptor {
         lastOutTime = System.currentTimeMillis();
         // 尝试加水,并且水还未满 ，放行
         if (water.get() < capacity) {
-
             water.addAndGet(1);
         } else {
             // 拒绝请求

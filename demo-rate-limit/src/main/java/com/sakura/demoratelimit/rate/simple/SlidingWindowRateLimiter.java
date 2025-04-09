@@ -1,4 +1,4 @@
-package com.sakura.demoratelimit.simple;
+package com.sakura.demoratelimit.rate.simple;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sakura.demoratelimit.modal.ResponseVo;

@@ -1,1 +1,8 @@
-spring.application.name=demo-rate-limit
+spring:
+  application:
+    name: rate-limit-demo
+  data:
+    redis:
+      database: 0
+      port: 6379
+      host: localhost

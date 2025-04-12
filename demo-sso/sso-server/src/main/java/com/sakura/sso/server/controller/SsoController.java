@@ -13,6 +13,7 @@ import java.util.Map;
 
 @Controller
 @RequiredArgsConstructor
+@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:8081"}, allowCredentials = "true")
 public class SsoController {
 
     private final TokenService tokenService;

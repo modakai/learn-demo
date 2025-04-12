@@ -12,6 +12,9 @@
         <option value="$PROJECT_DIR$/demo-elasticsearch/pom.xml" />
         <option value="$PROJECT_DIR$/demo-netty-websocket/pom.xml" />
         <option value="$PROJECT_DIR$/demo-rate-limit/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-sso/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-sso/sso-client-a/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-sso/sso-server/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: sso-server
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html

@@ -7,7 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="sso-server" />
         <module name="demo-netty-websocket" />
+        <module name="sso-client-a" />
         <module name="demo-data-sync" />
         <module name="demo-elasticsearch" />
         <module name="demo-rate-limit" />
@@ -20,6 +22,8 @@
       <module name="demo-elasticsearch" options="-parameters" />
       <module name="demo-netty-websocket" options="-parameters" />
       <module name="demo-rate-limit" options="-parameters" />
+      <module name="sso-client-a" options="" />
+      <module name="sso-server" options="" />
     </option>
   </component>
 </project>

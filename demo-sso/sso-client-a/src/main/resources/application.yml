@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: sso-client-a
+
+sso:
+  server:
+    url: http://localhost:8080
+    verifyPath: /verify

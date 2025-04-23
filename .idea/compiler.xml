@@ -10,8 +10,11 @@
         <module name="demo-netty-websocket" />
         <module name="sso-client-a" />
         <module name="demo-data-sync" />
+        <module name="demo-docker-java" />
+        <module name="service-product" />
         <module name="demo-elasticsearch" />
         <module name="sso-server" />
+        <module name="service-order" />
         <module name="demo-rate-limit" />
       </profile>
       <profile name="Annotation profile for demo-idempotent" enabled="true">
@@ -32,6 +35,8 @@
       <module name="demo-idempotent" options="-parameters" />
       <module name="demo-netty-websocket" options="-parameters" />
       <module name="demo-rate-limit" options="-parameters" />
+      <module name="service-order" options="-parameters" />
+      <module name="service-product" options="-parameters" />
       <module name="sso-client-a" options="" />
       <module name="sso-server" options="" />
     </option>

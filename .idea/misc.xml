@@ -16,6 +16,8 @@
         <option value="$PROJECT_DIR$/demo-sso/sso-client-a/pom.xml" />
         <option value="$PROJECT_DIR$/demo-sso/sso-server/pom.xml" />
         <option value="$PROJECT_DIR$/demo-idempotent/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-docker-java/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-demo/pom.xml" />
       </list>
     </option>
   </component>

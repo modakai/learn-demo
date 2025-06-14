@@ -11,6 +11,8 @@ import com.github.dockerjava.api.model.PortBinding;
 import com.github.dockerjava.core.DockerClientBuilder;
 import com.github.dockerjava.core.command.LogContainerResultCallback;
 import com.github.dockerjava.httpclient5.ApacheDockerHttpClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.URI;
 import java.util.List;
@@ -18,8 +20,8 @@ import java.util.List;
 
 public class DockerJavaMain {
 
-//    private static final Logger dockerLogger = (Logger) LoggerFactory.getLogger("com.github.dockerjava");
-//    private static final Logger clientLogger = (Logger) LoggerFactory.getLogger("org.apache.hc.client5.http");
+    private static final Logger dockerLogger = LoggerFactory.getLogger("com.github.dockerjava");
+    private static final Logger clientLogger = LoggerFactory.getLogger("org.apache.hc.client5.http");
 
     public static void main(String[] args) {
 //        dockerLogger.setLevel(Level.INFO);  // 动态设置为 DEBUG

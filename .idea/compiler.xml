@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo-images-search-mcp" />
         <module name="demo-netty-websocket" />
         <module name="sso-client-a" />
         <module name="demo-data-sync" />
@@ -33,6 +34,7 @@
       <module name="demo-data-sync" options="-parameters" />
       <module name="demo-elasticsearch" options="-parameters" />
       <module name="demo-idempotent" options="-parameters" />
+      <module name="demo-images-search-mcp" options="-parameters" />
       <module name="demo-netty-websocket" options="-parameters" />
       <module name="demo-rate-limit" options="-parameters" />
       <module name="service-order" options="-parameters" />

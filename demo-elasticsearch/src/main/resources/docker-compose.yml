@@ -1,0 +1,33 @@
+name: es
+
+services:
+  elasticsearch:
+    image: elasticsearch:7.17.27
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    volumes:
+      - D:/ProgramData/docker/es/es-data:/usr/share/elasticsearch/data
+      - D:/ProgramData/docker/es/es-plugins:/usr/share/elasticsearch/plugins
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - local
+
+  kibana:
+    image: kibana:7.17.27
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http:\\elasticsearch:9200  # 通过服务名直接通信
+    depends_on:
+      - elasticsearch
+    networks:
+      - local
+
+networks:
+  local:
+    driver: bridge

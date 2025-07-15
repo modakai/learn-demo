@@ -2,19 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo-images-search-mcp" />
         <module name="demo-netty-websocket" />
-        <module name="sso-client-a" />
         <module name="demo-data-sync" />
-        <module name="demo-docker-java" />
         <module name="service-product" />
+        <module name="demo-docker-java" />
         <module name="demo-elasticsearch" />
-        <module name="sso-server" />
+        <module name="demo-designPatterns" />
         <module name="service-order" />
         <module name="demo-rate-limit" />
       </profile>
@@ -23,24 +21,28 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="D:/software/Maven/apache-maven-3.9.6/repository/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
         </processorPath>
         <module name="demo-idempotent" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-demo" options="" />
       <module name="demo-data-sync" options="-parameters" />
+      <module name="demo-designPatterns" options="" />
+      <module name="demo-docker-java" options="" />
       <module name="demo-elasticsearch" options="-parameters" />
       <module name="demo-idempotent" options="-parameters" />
       <module name="demo-images-search-mcp" options="-parameters" />
       <module name="demo-netty-websocket" options="-parameters" />
       <module name="demo-rate-limit" options="-parameters" />
+      <module name="demo-sso" options="" />
       <module name="service-order" options="-parameters" />
       <module name="service-product" options="-parameters" />
-      <module name="sso-client-a" options="" />
-      <module name="sso-server" options="" />
+      <module name="services" options="" />
     </option>
   </component>
 </project>

@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/demo-idempotent/pom.xml" />
         <option value="$PROJECT_DIR$/demo-docker-java/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-fast-excel/pom.xml" />
       </list>
     </option>
   </component>

@@ -17,12 +17,21 @@
         <module name="service-order" />
         <module name="demo-rate-limit" />
       </profile>
+      <profile name="Annotation profile for demo-fast-excel" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="/usr/local/apache-maven/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="demo-fast-excel" />
+      </profile>
       <profile name="Annotation profile for demo-idempotent" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="D:/software/Maven/apache-maven-3.9.6/repository/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+          <entry name="/usr/local/apache-maven/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
         </processorPath>
         <module name="demo-idempotent" />
       </profile>
@@ -32,6 +41,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo-data-sync" options="-parameters" />
       <module name="demo-elasticsearch" options="-parameters" />
+      <module name="demo-fast-excel" options="-parameters" />
       <module name="demo-idempotent" options="-parameters" />
       <module name="demo-netty-websocket" options="-parameters" />
       <module name="demo-rate-limit" options="-parameters" />

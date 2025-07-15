@@ -13,9 +13,11 @@
     <file url="file://$PROJECT_DIR$/demo-docker-java/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-docker-java/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-fast-excel/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-idempotent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-images-search-mcp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-netty-websocket/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-netty-websocket/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-rate-limit/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-sso/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-sso/src/main/resources" charset="UTF-8" />

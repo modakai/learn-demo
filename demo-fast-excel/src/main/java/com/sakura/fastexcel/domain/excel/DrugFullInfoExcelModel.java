@@ -35,25 +35,25 @@ public class DrugFullInfoExcelModel implements Serializable {
     /**
      * 英文名（text）
      */
-    @ExcelProperty("英文名")
+    @ExcelProperty("英文名称")
     private String engName;
 
     /**
      * 药品通用名称（text）
      */
-    @ExcelProperty("药品通用名称")
+    @ExcelProperty("通用名称")
     private String commonName;
 
     /**
      * 药品中文名称（text）
      */
-    @ExcelProperty("药品中文名称")
+    @ExcelProperty("中文名称")
     private String cnName;
 
     /**
      * 成份（mediumtext）
      */
-    @ExcelProperty("成份")
+    @ExcelProperty({"成份"})
     private String component;
 
     /**

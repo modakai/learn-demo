@@ -1,0 +1,53 @@
+DROP TABLE IF EXISTS `drug_instruction_vo`;
+CREATE TABLE `drug_instruction_vo`
+(
+    `id`                             bigint                                                        NOT NULL AUTO_INCREMENT,
+    `instruction_code`               varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '药品说明书编号',
+    `instruction_code_2`             varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '药品说明书编号2',
+    `show_name`                      text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '显示名称',
+    `eng_name`                       text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '英文名',
+    `common_name`                    text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '药品通用名称',
+    `cn_name`                        text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '药品中文名称',
+    `component`                      mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci   NULL COMMENT '成份',
+    `indication`                     text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '适应症',
+    `warn`                           text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '警告',
+    `form`                           text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '规格',
+    `dosage`                         longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci     NULL COMMENT '用法用量',
+    `adverse_reactions`              longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci     NULL COMMENT '不良反应',
+    `contraindications`              text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '禁忌',
+    `precautions`                    text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NOT NULL COMMENT '注意事项',
+    `usein_preglact`                 text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '孕妇及哺乳期妇女用药',
+    `usein_children`                 text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '儿童用药',
+    `usein_elderly`                  text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '老年用药',
+    `drug_interactions`              text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '药物相互作用',
+    `overdosage`                     longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci     NULL COMMENT '药物过量',
+    `mechanism_action`               text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '药理作用',
+    `pharmacokinetics`               text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '药代动力学',
+    `description`                    text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '性状',
+    `storage`                        text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '贮藏',
+    `pack`                           text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '包装',
+    `period`                         text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '有效期',
+    `standard`                       text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '执行标准',
+    `approve_code`                   text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci         NULL COMMENT '批准文号',
+    `otc`                            varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci  NULL DEFAULT NULL COMMENT '是否OTC',
+    `marketing_authorisation_holder` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '上市许可持有人',
+    `company_name`                   varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '生产企业',
+    `cate_name`                      varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '药物分类',
+    `approve_date`                   varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci  NULL DEFAULT NULL COMMENT '核准日期',
+    `modify_date`                    varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci  NULL DEFAULT NULL COMMENT '修改日期',
+    `create_time`                    datetime                                                      NULL DEFAULT NULL,
+    `create_user_id`                 varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT '0',
+    `create_user_name`               varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci  NULL DEFAULT NULL COMMENT '创建人名称',
+    `update_time`                    datetime                                                      NULL DEFAULT NULL,
+    `update_user_id`                 varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT '0',
+    `update_user_name`               varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci  NULL DEFAULT NULL COMMENT '更新人名称',
+    `version_num`                    int                                                           NULL DEFAULT 0 COMMENT '版本号（乐观锁）',
+    `delete_flag`                    int                                                           NULL DEFAULT 0 COMMENT '是否删除：0.否  1.是',
+    PRIMARY KEY (`id`) USING BTREE,
+    UNIQUE INDEX `instruction_code_key` (`instruction_code` ASC) USING BTREE,
+    UNIQUE INDEX `instruction_code2_key` (`instruction_code_2` ASC) USING BTREE
+) ENGINE = InnoDB
+  AUTO_INCREMENT = 1947103229132062723
+  CHARACTER SET = utf8mb4
+  COLLATE = utf8mb4_0900_ai_ci COMMENT = '药品说明书'
+  ROW_FORMAT = Dynamic;

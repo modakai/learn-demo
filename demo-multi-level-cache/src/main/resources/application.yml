@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: multi-level-cache
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+  cache:
+    type: generic
+logging:
+  level:
+    com.sakura.demo.multilevelcache: debug

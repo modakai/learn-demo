@@ -10,4 +10,7 @@ public interface UserService {
 
     @GetMapping("/sayHello")
     public String sayHello(@RequestParam("name") String name, @RequestHeader("authorization") String authHeader);
+
+    @GetMapping("/getInfo")
+    public String getInfo(@RequestParam("name") String name);
 }

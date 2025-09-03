@@ -13,12 +13,13 @@ dubbo:
   application:
     name: ${spring.application.name}
     logger: slf4j
-    qos-enable: false
     protocol: tri
   protocol:
     name: tri
     port: 50051
     id: tri
+  provider:
+    filter: saTokenFilter
   registry:
     address: nacos://localhost:8848?username=nacos&password=nacos
     register-mode: instance
@@ -31,4 +32,5 @@ dubbo:
     password: nacos
   metrics:
     enable-metadata: false
+
 

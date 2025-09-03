@@ -1,0 +1,1 @@
+saTokenFilter=com.sakura.demo.dubbo.user.filter.SaTokenDubboGlobalFilter

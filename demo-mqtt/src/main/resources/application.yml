@@ -1,0 +1,8 @@
+spring:
+  mqtt:
+    username: sakura
+    password: sakura
+    url: tcp://127.0.0.1:1883
+    subClientId: sub_client_id_sakura
+    subTopic: sakura/iot/lamp/line
+    pubClientId: pub_client_id_sakura
